@@ -262,7 +262,8 @@ class plotKeepoutMap(object):
         ax2.set_xlim(left=0.0, right=100.0)
         ax2.set_ylim(bottom=0.0, top=NUMBER_Y)
         ax2.set_xlabel("% Time\n Visible", weight="bold")
-        plt.show(block=False)
+        #plt.show(block=False)
+        plt.show()
         plt.gcf().canvas.draw()
 
         DT = datetime.datetime
@@ -367,7 +368,8 @@ class plotKeepoutMap(object):
             ax2.set_xlim(left=0.0, right=100.0)
             ax2.set_ylim(bottom=0.0, top=NUMBER_Y)
             ax2.set_xlabel("% Time\n Visible", weight="bold")
-            plt.show(block=False)
+            #plt.show(block=False)
+            plt.show()
             plt.gcf().canvas.draw()
 
             DT = datetime.datetime
@@ -396,7 +398,8 @@ class plotKeepoutMap(object):
             plt.ylabel("Target Count", weight="bold")
             plt.xlabel("Time Visible (%)", weight="bold")
             plt.xlim((0, 100))
-            plt.show(block=False)
+            #plt.show(block=False)
+            plt.show()
             plt.gcf().canvas.draw()
 
             DT = datetime.datetime
@@ -429,7 +432,8 @@ class plotKeepoutMap(object):
             plt.ylabel("Target Count", weight="bold")
             plt.xlabel("Time Visible (%)", weight="bold")
             plt.xlim((0, np.ceil(np.max(tVis) / tTotal * 100.0)))
-            plt.show(block=False)
+            #plt.show(block=False)
+            plt.show()
             plt.gcf().canvas.draw()
 
             DT = datetime.datetime
@@ -461,7 +465,8 @@ class plotKeepoutMap(object):
             .add_subplot(1, 1, 1)
             .hist(np.asarray(tVis2) / tTotal * 100.0, bins=bins)
         )
-        plt.show(block=False)
+        #plt.show(block=False)
+        plt.show()
         plt.close(
             665465461286584
         )  # doing this just to descroy above plot Replace with numpy.histogram in future
@@ -495,7 +500,8 @@ class plotKeepoutMap(object):
         ax2.set_xlim(left=0.0, right=100.0)
         ax2.set_ylim(bottom=0.0, top=1.1 * np.max(n2))
         ax3.set_ylim(bottom=0.0, top=100.0)
-        plt.show(block=False)
+        #plt.show(block=False)
+        plt.show()
         plt.gcf().canvas.draw()
 
         fname = "koMapHIST_CDF_" + folder.split("/")[-1] + "_" + date

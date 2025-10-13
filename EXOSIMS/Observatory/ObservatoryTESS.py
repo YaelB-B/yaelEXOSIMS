@@ -30,8 +30,8 @@ class ObservatoryTESS(Observatory):
             print("Roman orbit data not found. Downloading.")
             obj = Horizons(
                 id="-95",
-                location="0",
-                epochs={"start": "2022-01-01", "stop": "2023-01-01", "step": "1d"},
+                location="500@10",
+                epochs={"start": "2022-01-01", "stop": "2026-01-01", "step": "1d"},
             )
             roman_ecliptic_vectors_table = obj.vectors()
             roman_ecliptic_vectors_table.write(eclip_file)
@@ -59,6 +59,8 @@ class ObservatoryTESS(Observatory):
         self.tf = Time(
             roman_ecliptic_vectors_table["datetime_jd"].data[-1], format="jd"
         )
+        print(self.t0)
+        print(self.tf)
 
         # define inertial basis vectors
         self.e1 = np.array([1, 0, 0])
